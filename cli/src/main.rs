@@ -1,23 +1,21 @@
 use std::env;
 use std::process;
 
-use cli::Config;
+use cli;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
+    // collect argument from terminal and iterate
+    // let args: Vec<String> = env::args().collect();
 
-    // Get arguments from the terminal
-    let config = Config::new(&args).unwrap_or_else(|err| {
-        println!("Problem parsing arguments: {}", err);
-        process::exit(1);
+    let config = cli::Config::new(env::args()).unwrap_or_else(|err| {
+        eprintln!("Problem parsing arguments: {}", err);
+        process::exit(1)
     });
 
-    println!("Searching for {}", config.query);
-    println!("In {}", config.filename);
-
     if let Err(e) = cli::run(config) {
-        println!("Application error {}", e);
-        process::exit(1);
+        eprintln!("Application error: {}", e);
+        process::exit(1)
     }
-}       
- 
+}
+
+// binary crates
