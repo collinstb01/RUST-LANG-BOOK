@@ -1,0 +1,1 @@
+/mnt/c/Users/TB's\ PC/Desktop/PROGRAMMING/LEARNING/RUST/pratice/target/debug/pratice: /mnt/c/Users/TB's\ PC/Desktop/PROGRAMMING/LEARNING/RUST/pratice/src/lib.rs /mnt/c/Users/TB's\ PC/Desktop/PROGRAMMING/LEARNING/RUST/pratice/src/main.rs
